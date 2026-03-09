@@ -93,4 +93,23 @@ window.location.href = chatUrl;
 </button>
 
 </body>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+<script>
+
+vkBridge.send("VKWebAppInit");
+
+function openChat() {
+
+vkBridge.send("VKWebAppSendPayload", {
+payload: {
+start: "rules_ok"
+}
+});
+
+vkBridge.send("VKWebAppClose");
+
+}
+
+</script>
 </html>
