@@ -100,9 +100,19 @@ vkBridge.send("VKWebAppInit");
 
 function openChat() {
 
+const chatUrl = "https://vk.com/im?sel=-234512844";
+
+if (window.vkBridge) {
+
 vkBridge.send("VKWebAppOpenLink", {
-url: "https://vk.com/im?sel=-234512844&start=start"
+url: chatUrl
 });
+
+} else {
+
+window.location.href = chatUrl;
+
+}
 
 }
 
