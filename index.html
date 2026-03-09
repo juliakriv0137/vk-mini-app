@@ -98,11 +98,10 @@ window.location.href = chatUrl;
 
 vkBridge.send("VKWebAppInit");
 
-function openChat(){
+function openChat() {
 
-vkBridge.send("VKWebAppOpenApp", {
-  app_id: 0,
-  location: "im?sel=-234512844&start=start"
+vkBridge.send("VKWebAppOpenLink", {
+url: "https://vk.com/im?sel=-234512844&start=start"
 });
 
 }
