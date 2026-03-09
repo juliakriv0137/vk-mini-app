@@ -88,35 +88,9 @@ window.location.href = chatUrl;
 Пройдите по кнопке, чтобы запустить информационный цикл
 </p>
 
-<button class="btn" onclick="openChat()">
+<a class="btn" href="https://vk.com/im?sel=-234512844" target="_blank">
 Начать
-</button>
-
-<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-
-<script>
-
-vkBridge.send("VKWebAppInit");
-
-function openChat() {
-
-const chatUrl = "https://vk.com/im?sel=-234512844";
-
-try {
-
-vkBridge.send("VKWebAppOpenLink", {
-url: chatUrl
-});
-
-} catch(e) {
-
-window.location.href = chatUrl;
-
-}
-
-}
-
-</script>
+</a>
 
 </body>
 </html>
