@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Железные правила</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-family:Arial;
+background:#f5f5f5;
+color:#222;
+text-align:center;
+padding:20px;
+}
+
+img{
+width:400px;
+max-width:90%;
+margin-bottom:25px;
+}
+
+h1{
+margin-bottom:10px;
+}
+
+p{
+font-size:16px;
+max-width:400px;
+margin-bottom:30px;
+line-height:1.5;
+}
+
+.btn{
+background:#4F46E5;
+padding:16px 32px;
+border-radius:12px;
+color:white;
+font-size:18px;
+border:none;
+cursor:pointer;
+transition:0.2s;
+}
+
+.btn:hover{
+background:#4338CA;
+}
+
+</style>
+
+<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+<script>
+
+vkBridge.send("VKWebAppInit");
+
+function openChat(){
+
+const chatUrl = "https://vk.com/im?sel=-234512844";
+
+if(window.top){
+window.top.location.href = chatUrl;
+}else{
+window.location.href = chatUrl;
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<img src="./cover.jpeg">
+
+<h1>Железные правила</h1>
+
+<p>
+Пройдите по кнопке, чтобы запустить информационный цикл
+</p>
+
+<button class="btn" onclick="openChat()">
+Начать
+</button>
+
+</body>
+</html>
