@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
 <meta charset="UTF-8">
 <title>Железные правила</title>
 
@@ -24,7 +23,7 @@ padding:20px;
 }
 
 img{
-width:400px;
+width:320px;
 max-width:90%;
 margin-bottom:25px;
 }
@@ -63,11 +62,15 @@ background:#4338CA;
 
 vkBridge.send("VKWebAppInit");
 
-function openChat() {
+function openChat(){
 
-vkBridge.send("VKWebAppOpenCommunityMessages", {
-  group_id: 234512844
-});
+const chatUrl = "https://vk.com/im?sel=-234512844";
+
+if(window.top){
+window.top.location.href = chatUrl;
+}else{
+window.location.href = chatUrl;
+}
 
 }
 
@@ -77,7 +80,7 @@ vkBridge.send("VKWebAppOpenCommunityMessages", {
 
 <body>
 
-<img src="./cover.jpeg">
+<img src="./cover.jpg">
 
 <h1>Железные правила</h1>
 
