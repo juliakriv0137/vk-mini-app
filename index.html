@@ -102,13 +102,13 @@ function openChat() {
 
 const chatUrl = "https://vk.com/im?sel=-234512844";
 
-if (window.vkBridge) {
+try {
 
 vkBridge.send("VKWebAppOpenLink", {
 url: chatUrl
 });
 
-} else {
+} catch(e) {
 
 window.location.href = chatUrl;
 
